@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    min-height: 100vh;
+}
+
+.Sidebar {
+    width: 250px;
+    max-width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    height: 100%;
+    position: fixed;
+    padding: 50px 0;
+}
+.Sidebar a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    transition: 0.3s;
+    border-left: 4px;
+    margin-bottom: 25px;
+    margin-top: 10%;
+}
+
+.Sidebar a:hover {
+    background-color: #34495e;
+    border-left: 4px solid skyblue;
+}
+
+.Main_Content {
+    margin-left: 250px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 250px);
+}
+
+.sort_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+    width: calc(100% - 300px);
+}
+
+.sort_by_ascending,
+.sort_by_descending{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.sort_by_ascending a,
+.sort_by_descending a,
+.reset {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sort_by_ascending a:hover,
+.sort_by_descending a:hover,
+.reset:hover {
+    background-color: #34495e;
+}
+
+.reset {
+    margin-top: 10px;
+    padding: 12px 30px;
+    background-color: crimson;
+}
+
+.sort_buttons a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.Display_All_Companies, .Display_All_Medicines, .Display_All_Ways,  .Display_All_Types{
+    margin-left: 270px;
+    width: calc(100% - 300px);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.Display_All_Companies th, .Display_All_Companies td,
+.Display_All_Medicines th, .Display_All_Medicines td,
+.Display_All_Ways th, .Display_All_Ways td,
+.Display_All_Types th, .Display_All_Types td{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.Display_Header {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.Edit_Button,
+.Delete_Button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.Edit_Button {
+    background-color: #3498db;
+}
+
+.Delete_Button {
+    background-color: #e74c3c;
+}
